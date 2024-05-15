@@ -8,18 +8,26 @@
   "author": "up-tri",
   "commands": [
     {
-      "name": "markdown",
+      "name": "todolist",
       "title": "Markdown",
       "description": "Render markdown in a detail view.",
-      "keywords": [
-        "detail"
-      ],
-      "mode": "view"
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "data-directory-path",
+          "title": "Data Directory Path",
+          "description": "TODOリストの保存先パス（json）",
+          "type": "directory",
+          "defaultValue": "./data"
+        }
+      ]
     }
   ],
   "dependencies": {
     "@raycast/api": "1.74.0",
-    "@raycast/utils": "1.15.0"
+    "@raycast/utils": "1.15.0",
+    "dayjs": "1.11.11",
+    "nanoid": "5.0.7"
   },
   "devDependencies": {
     "@eslint/js": "9.2.0",

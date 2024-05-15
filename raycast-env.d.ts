@@ -13,12 +13,15 @@ type ExtensionPreferences = {}
 declare type Preferences = ExtensionPreferences
 
 declare namespace Preferences {
-  /** Preferences accessible in the `markdown` command */
-  export type Markdown = ExtensionPreferences & {}
+  /** Preferences accessible in the `todolist` command */
+  export type Todolist = ExtensionPreferences & {
+  /** Data Directory Path - TODOリストの保存先パス（json） */
+  "data-directory-path"?: string
+}
 }
 
 declare namespace Arguments {
-  /** Arguments passed to the `markdown` command */
-  export type Markdown = {}
+  /** Arguments passed to the `todolist` command */
+  export type Todolist = {}
 }
 
